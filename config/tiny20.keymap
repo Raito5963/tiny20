@@ -717,6 +717,16 @@
             #binding-cells = <0>;
             bindings = <&tu>, <&du>, <&ltu>;
         };
+
+        su_zu: su_zu {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SU_ZU";
+            bindings = <&zu>, <&su>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <1>;
+        };
     };
 
     keymap {
@@ -726,7 +736,7 @@
 
         default_layer {
             bindings = <
-&a_la 0 A  &ra  &wo  &minus_x  &to_do 0 0  &ha_x  &te_de 0 0  &tu_x  &na  &ru  &ni  &no  &i_li 0 I  &ta_da 0 0  &si_zi 0 0  &ka_ga 0 0  &tog 5  &lt NUMBERS ENTER  &lt NAV SPACE  &kp KP_COMMA
+&su_zu 0 0  &ra  &wo  &minus_x  &to_do 0 0  &ha_x  &te_de 0 0  &tu_x  &na  &ru  &ni  &no  &i_li 0 I  &ta_da 0 0  &si_zi 0 0  &ka_ga 0 0  &tog 5  &lt NUMBERS ENTER  &lt NAV SPACE  &kp KP_COMMA
             >;
         };
 
