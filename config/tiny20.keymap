@@ -167,11 +167,11 @@
             label = "TE";
         };
 
-        to: to {
+        too: too {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp T &kp O>;
-            label = "TO";
+            label = "TOO";
         };
 
         na: na {
@@ -614,6 +614,13 @@
             bindings = <&kp BSLH>;
             label = "BACKSLASH";
         };
+
+        ltu: ltu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp T &kp U>;
+            label = "LTU";
+        };
     };
 
     behaviors {
@@ -636,6 +643,80 @@
             tapping-term-ms = <1>;
             bindings = <&la>, <&kp>;
         };
+
+        i_li: i_li {
+            compatible = "zmk,behavior-hold-tap";
+            label = "I_LI";
+            bindings = <&li>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <1>;
+            flavor = "tap-preferred";
+        };
+
+        te_de: te_de {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TE_DE";
+            bindings = <&de>, <&te>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <1>;
+            flavor = "tap-preferred";
+        };
+
+        ta_da: ta_da {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TA_DA";
+            bindings = <&da>, <&ta>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <1>;
+            flavor = "tap-preferred";
+        };
+
+        si_zi: si_zi {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SI_ZI";
+            bindings = <&zi>, <&si>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <1>;
+        };
+
+        ka_ga: ka_ga {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KA_GA";
+            bindings = <&ga>, <&ka>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <1>;
+            flavor = "tap-preferred";
+        };
+
+        to_do: to_do {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TO_DO";
+            bindings = <&do>, <&too>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <1>;
+            flavor = "tap-preferred";
+        };
+
+        ha_x: ha_x {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HA_X";
+            #binding-cells = <0>;
+            bindings = <&ha>, <&ba>, <&pa>;
+        };
+
+        tu_x: tu_x {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TU_X";
+            #binding-cells = <0>;
+            bindings = <&tu>, <&du>, <&ltu>;
+        };
     };
 
     keymap {
@@ -645,7 +726,7 @@
 
         default_layer {
             bindings = <
-&a_la 0 A  &ra  &wo  &minus_x  &kp N  &kp E  &kp A  &kp I  &na  &ru  &ni  &no  &kp K  &kp T  &kp N  &kp S  &kp LCTRL  &lt NUMBERS ENTER  &lt NAV SPACE  &kp KP_COMMA
+&a_la 0 A  &ra  &wo  &minus_x  &to_do 0 0  &kp E  &te_de 0 0  &kp I  &na  &ru  &ni  &no  &i_li 0 I  &ta_da 0 0  &si_zi 0 0  &ka_ga 0 0  &kp LCTRL  &lt NUMBERS ENTER  &lt NAV SPACE  &kp KP_COMMA
             >;
         };
 
