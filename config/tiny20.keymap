@@ -726,7 +726,7 @@
 
         default_layer {
             bindings = <
-&a_la 0 A  &ra  &wo  &minus_x  &to_do 0 0  &kp E  &te_de 0 0  &kp I  &na  &ru  &ni  &no  &i_li 0 I  &ta_da 0 0  &si_zi 0 0  &ka_ga 0 0  &kp LCTRL  &lt NUMBERS ENTER  &lt NAV SPACE  &kp KP_COMMA
+&a_la 0 A  &ra  &wo  &minus_x  &to_do 0 0  &ha_x  &te_de 0 0  &tu_x  &na  &ru  &ni  &no  &i_li 0 I  &ta_da 0 0  &si_zi 0 0  &ka_ga 0 0  &tog 5  &lt NUMBERS ENTER  &lt NAV SPACE  &kp KP_COMMA
             >;
         };
 
